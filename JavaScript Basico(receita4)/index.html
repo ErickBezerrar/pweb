@@ -1,46 +1,53 @@
 <!DOCTYPE html>
+<html>
 
-<html>   
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="styles.css">
+</head>
 
-   <head>
+<body>
 
-      <meta charset="UTF-8">      
-      <link rel="stylesheet" href="styles.css">      
-   </head>
+   <div id="meuamor">
+      <button id="botaoCarregar">Carregando cervejas...</button>
+   </div>
 
-   
-
-   <body>
-
-      <div id="meu amor"><button id="botaoCarregar">Carregando cervejas...</button></div>            
-
-   </body>   
-
-   
+   <div id="meuamor2">
+      <button id="botaoEmbaralhar">Embaralhar cervejas...</button>
+   </div>
 
    <script>
+      let cervejas = ["Guiness", "Desperados", "Becks"];
 
-      let cervejas = ["Guiness", "Desperados", "Becks"]
+      function transformar(item) {
 
-      function transformar(item){
-
-         return `<div id="item">${item}</div>`
-
-      }
-
-      function carregarDiv(){
-        
-         let div = document.getElementById("meu amor")
-
-         let cervejasHtml = cervejas.map(transformar) 
-
-         div.innerHTML = `${cervejasHtml.join("\n")}`
+         return `<div class="item">${item}</div>`;
 
       }
 
-      let botao = document.getElementById("botaoCarregar")
-      botao.addEventListener("click", carregarDiv)                 
+      function carregarDiv() {
+         let div = document.getElementById("meuamor");
 
+         cervejas.sort();
+
+         div.innerHTML = `${cervejas.map(transformar).join("")}`;
+      }
+
+      function embaralharDiv(){
+         let div = document.getElementById("meuamor2");
+
+         cervejas.shuffle();
+
+         div.innerHTML = `${cervejas.map(transformar).join("")}`;
+      }
+
+      let botaoCarregar = document.getElementById("botaoCarregar");
+      let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+
+      botaoCarregar.addEventListener("click", carregarDiv);
+      botaoEmbaralhar.addEventListener("click", embaralharDiv);
    </script>
+
+</body>
 
 </html>
