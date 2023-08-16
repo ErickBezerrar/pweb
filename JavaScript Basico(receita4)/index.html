@@ -9,20 +9,18 @@
 <body>
 
    <div id="meuamor">
-      <button id="botaoCarregar">Carregando cervejas...</button>
+      <button id="botaoCarregar">CARREGANDO CERVEJAS</button>
    </div>
-
+   <br><br>
    <div id="meuamor2">
-      <button id="botaoEmbaralhar">Embaralhar cervejas...</button>
+      <button id="botaoEmbaralhar">EMBARALHAR CERVEJAS</button>
    </div>
 
    <script>
       let cervejas = ["Guiness", "Desperados", "Becks"];
 
       function transformar(item) {
-
          return `<div class="item">${item}</div>`;
-
       }
 
       function carregarDiv() {
@@ -33,10 +31,17 @@
          div.innerHTML = `${cervejas.map(transformar).join("")}`;
       }
 
+      function shuffleArray(array) {
+         for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+         }
+      }
+
       function embaralharDiv(){
          let div = document.getElementById("meuamor2");
 
-         cervejas.shuffle();
+         shuffleArray(cervejas);
 
          div.innerHTML = `${cervejas.map(transformar).join("")}`;
       }
