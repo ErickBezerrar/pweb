@@ -1,0 +1,8 @@
+#meuamor {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#meuamor.mostrar {
+    opacity: 1;
+}
