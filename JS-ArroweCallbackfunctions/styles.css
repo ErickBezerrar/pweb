@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; 
     padding: 0; 
-
     min-height: 100vh;
 }
 
@@ -27,7 +26,12 @@ body {
     margin-top: 20px;
  }
 
- #botoesContainer button {
+ #botoesContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 10px;
     width: 220px;
     height: 50px;
     border: none;
@@ -38,10 +42,10 @@ body {
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin: 0 10px; 
- }
+}
 
- #botoesContainer button:before {
+
+ #botoesContainer a:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -58,19 +62,19 @@ body {
     border-radius: 10px;
  }
 
- #botoesContainer button:active {
+ #botoesContainer a:active {
     color: #000;
  }
 
- #botoesContainer button:active:after {
+ #botoesContainer a:active:after {
     background: transparent;
  }
 
- #botoesContainer button:hover:before {
+ #botoesContainer a:hover:before {
     opacity: 1;
  }
 
- #botoesContainer button:after {
+ #botoesContainer a:after {
     z-index: -1;
     content: '';
     position: absolute;
