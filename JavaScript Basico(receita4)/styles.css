@@ -1,3 +1,8 @@
+body{
+    background-color: #084d6e;
+    width: 100%;
+}
+
 #meuamor{
     display: flex;
     justify-content: center;
@@ -5,17 +10,7 @@
     align-items: center;
     text-align: center;
     font-size: 500%;
-    text-decoration: blueviolet;
-}
-
-#meuamor2{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 500%;
-    text-decoration: blueviolet;
+    color: #fff;
 }
 
 #botaoCarregar {
@@ -77,6 +72,7 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
 #botaoEmbaralhar {
     width: 220px;
     height: 50px;
@@ -111,7 +107,7 @@
     color: #000
 }
 
-#botaoEmbaralharr:active:after {
+#botaoEmbaralhar:active:after {
     background: transparent;
 }
 

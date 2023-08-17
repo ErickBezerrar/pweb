@@ -8,13 +8,11 @@
 
 <body>
 
-   <div id="meuamor">
       <button id="botaoCarregar">CARREGANDO CERVEJAS</button>
-   </div>
    <br><br>
-   <div id="meuamor2">
       <button id="botaoEmbaralhar">EMBARALHAR CERVEJAS</button>
-   </div>
+
+   <div id="meuamor"></div>
 
    <script>
       let cervejas = ["Guiness", "Desperados", "Becks"];
@@ -39,7 +37,7 @@
       }
 
       function embaralharDiv(){
-         let div = document.getElementById("meuamor2");
+         let div = document.getElementById("meuamor");
 
          shuffleArray(cervejas);
 
