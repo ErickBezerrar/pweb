@@ -8,51 +8,63 @@
 
 <body>
 
-   <button id="botaoCarregar">CARREGANDO CERVEJAS</button>
-   <br><br>
-   <button id="botaoEmbaralhar">EMBARALHAR CERVEJAS</button>
+    <div id="botoesContainer">
+        <button id="botaoSort">SORTEAR SORVETES</button>
+        <button id="botaoShuffle">EMBARALHAR SORVETES</button>
+        <button id="botaoDiv">CARREGAR SORVETES</button>
+     </div>
+     <br><br>
 
    <div id="meuamor"></div>
 
    <script>
-      let cervejas = ["Guiness", "Desperados", "Becks"];
+        let sorvetes = ["Chocolate", "Morango", "Baunilha", "Creme", "Limão", "Flocos", "Coco", "Manga", "Abacaxi", "Uva"];
 
-      function transformar(cerv) {
-         return `<div class="cervs">${cerv}</div>`;
+      const transformar = (item) => {
+         return `<div class="item">${item}</div>`;
       }
 
-      function shuffleArray(array) {
+      const shuffleArray = (array) => {
          for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
          }
       }
 
-      function carregarDiv(cervs) {
+      const loadDiv = (sorvs) => {
+        const div = document.getElementById("meuamor");
+        const itensHtml = sorvs.map(transformar);
+        div.innerHTML = itensHtml.join("");
+      };
+
+      const sortDiv = (sorvs) => {
          let div = document.getElementById("meuamor");
-
-         cervs.sort();
-
-         div.innerHTML = `${cervs.map(transformar).join("")}`;
+         sorvs.sort();
+         div.innerHTML = `${sorvs.map(transformar).join("")}`;
       }
 
-      function embaralharDiv(cervs){
+      const shuffleDiv = (sorvs) => {
          let div = document.getElementById("meuamor");
 
-         shuffleArray(cervs);
+         shuffleArray(sorvs);
 
-         div.innerHTML = `${cervs.map(transformar).join("")}`;
+         div.innerHTML = `${sorvs.map(transformar).join("")}`;
       }
 
-      let botaoCarregar = document.getElementById("botaoCarregar");
-      let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+      let botaoSort = document.getElementById("botaoSort");
+      let botaoShuffle = document.getElementById("botaoShuffle");
+      let botaoDiv =document.getElementById("botaoDiv");
 
-      botaoCarregar.addEventListener("click", function() {
-         carregarDiv([...cervejas]);
+      botaoSort.addEventListener("click", function() {
+         sortDiv([...sorvetes]);
       });
 
-      botaoEmbaralhar.addEventListener("click", function() {
-         embaralharDiv([...cervejas]);
+      botaoShuffle.addEventListener("click", function() {
+         shuffleDiv([...sorvetes]);
+      });
+
+      botaoDiv.addEventListener("click", function() {
+        loadDiv([...sorvetes]);
       });
    </script>
 
