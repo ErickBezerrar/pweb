@@ -5,25 +5,8 @@
    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <div><button id="botaoCarregar">Carregando cervejas...</button></div>
-   <table id="cervejasDiv">
-    <tr>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-   </table>            
+   <button id="botaoCarregar">Carregando cervejas...</button>
+   <table id="cervejasDiv"></table>            
 </body>   
 <script>
    let cervejas = [
@@ -33,7 +16,7 @@
    ]
    const carregarDiv = cs => {
       const div = document.getElementById("cervejasDiv")
-      const itensHtml = cs.map( item => `<table>${cervejas.name} -- ${cervejas.alcohol}</table>` ) 
+      const itensHtml = cs.map( item => `<table>${"cervejas.name"} ${"cervejas.alcohol"}</table>` ) 
       div.innerHTML = `${itensHtml.join("\n")}`
    }
    let botao = document.getElementById("botaoCarregar")
