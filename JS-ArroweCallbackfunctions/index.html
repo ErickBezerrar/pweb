@@ -1,44 +1,61 @@
 <!DOCTYPE html>
+<html>
 
-<html>   
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="styles.css">
+</head>
 
-   <head>
+<body>
 
-      <meta charset="UTF-8">      
+   <button id="botaoCarregar">CARREGANDO CERVEJAS</button>
+   <br><br>
+   <button id="botaoEmbaralhar">EMBARALHAR CERVEJAS</button>
 
-   </head>
+   <div id="meuamor"></div>
 
-   <body>
-
-      <div><button id="botaoCarregar">Carregando cervejas...</button></div>
-
-      <div id="meu amor"></div>            
-
-   </body>   
    <script>
+      let cervejas = ["Guiness", "Desperados", "Becks"];
 
-      let cervejas = ["Guiness", "Desperados", "Becks"]
-
-      const transformar = (item) => {
-
-         return `<h1>${item}</h1>`
-
+      function transformar(cerv) {
+         return `<div class="cervs">${cerv}</div>`;
       }
 
-      const carregarDiv = () => {
-
-         const div = document.getElementById("meu amor")
-
-         const cervejasHtml = cervejas.map(transformar) 
-
-         div.innerHTML = `${cervejasHtml.join("\n")}`
-
+      function shuffleArray(array) {
+         for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+         }
       }
 
-      let botao = document.getElementById("botaoCarregar")
+      function carregarDiv(cervs) {
+         let div = document.getElementById("meuamor");
 
-      botao.addEventListener("click", carregarDiv)                 
+         cervs.sort();
 
+         div.innerHTML = `${cervs.map(transformar).join("")}`;
+      }
+
+      function embaralharDiv(cervs){
+         let div = document.getElementById("meuamor");
+
+         shuffleArray(cervs);
+
+         div.innerHTML = `${cervs.map(transformar).join("")}`;
+      }
+
+      let botaoCarregar = document.getElementById("botaoCarregar");
+      let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+
+      botaoCarregar.addEventListener("click", function() {
+         carregarDiv([...cervejas]);
+      });
+
+      botaoEmbaralhar.addEventListener("click", function() {
+         embaralharDiv([...cervejas]);
+      });
    </script>
+
+</body>
 
 </html>
