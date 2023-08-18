@@ -53,17 +53,24 @@
       let botaoShuffle = document.getElementById("botaoShuffle");
       let botaoDiv =document.getElementById("botaoDiv");
 
-      botaoSort.addEventListener("click", function() {
-         sortDiv([...sorvetes]);
-      });
+    botaoSort.addEventListener("click", function() {
+        const sortedSorvetes = [...sorvetes].map(sorvete => sorvete.toUpperCase());
+        sortDiv(sortedSorvetes);
 
-      botaoShuffle.addEventListener("click", function() {
-         shuffleDiv([...sorvetes]);
-      });
+    });
 
-      botaoDiv.addEventListener("click", function() {
-        loadDiv([...sorvetes]);
-      });
+    botaoShuffle.addEventListener("click", function() {
+        const shuffledSorvetes = [...sorvetes].map(sorvete => sorvete.toUpperCase());
+        shuffleDiv(shuffledSorvetes);
+
+    });
+
+    botaoDiv.addEventListener("click", function() {
+        const loadedSorvetes = [...sorvetes].map(sorvete => sorvete.toUpperCase());
+        loadDiv(loadedSorvetes);
+
+    });
+
    </script>
 
 </body>
