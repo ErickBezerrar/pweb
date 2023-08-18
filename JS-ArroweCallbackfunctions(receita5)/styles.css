@@ -93,7 +93,7 @@ body {
 }
 
 #botoesContainer a:hover {
-    background-color: #222; /* Cor de fundo escura quando hover */
+    background-color: #222;
 }
 
 #botoesContainer a:after {
