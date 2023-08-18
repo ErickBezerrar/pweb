@@ -12,6 +12,7 @@
         <a href="#" id="botaoSort">SORTEAR SORVETES(ALFABÉTICA)</a>
         <a href="#" id="botaoShuffle">EMBARALHAR SORVETES</a>
         <a href="#" id="botaoDiv">CARREGAR SORVETES</a>
+        <a href="#" id="botaoReverse">SORVERTES REVERSO</a>
      </div>
      <br><br>
 
@@ -41,13 +42,20 @@
          let div = document.getElementById("meuamor");
          sorvs.sort();
          div.innerHTML = `${sorvs.map(transformar).join("")}`;
-      }
+      };
 
       const shuffleDiv = (sorvs) => {
          let div = document.getElementById("meuamor");
          shuffleArray(sorvs);
          div.innerHTML = `${sorvs.map(transformar).join("")}`;
-      }
+      };
+
+      const reverseDiv = (sorvs) => {
+         let div = document.getElementById("meuamor");
+         const reversedSorvetes = [...sorvs].reverse();
+         div.innerHTML = `${reversedSorvetes.map(transformar).join("")}`;
+      };
+
 
       let botaoSort = document.getElementById("botaoSort");
       let botaoShuffle = document.getElementById("botaoShuffle");
@@ -70,6 +78,11 @@
         loadDiv(loadedSorvetes);
 
     });
+
+    botaoReverse.addEventListener("click", function() {
+         const reversedSorvetes = [...sorvetes].map(sorvete => sorvete.toUpperCase());
+         reverseDiv(reversedSorvetes);
+    });   
    </script>
 
 </body>
