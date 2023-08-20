@@ -9,10 +9,14 @@
    <button id="botaoCarregar">Carregando cervejas...</button>
    
    <table id="cervejasDiv">
-      <tr>
-         <th id="cervejastabela"></th>
-         <th id="alcoholtabela"></th>
-      </tr>
+      <thead>
+         <tr>
+            <th>Nome</th>
+            <th>Álcool</th>
+         </tr>
+      </thead>
+      <tbody id="cervejasTabela">
+      </tbody>
    </table>            
 </body>   
 <script>
@@ -23,14 +27,20 @@
       { name: "Heineken", alcohol: "4%" }
    ]
    const carregarDiv = cs => {
-      const div = document.getElementById("cervejasDiv")
-      const itensHtml = cs.map(item => `<div>${"cervejas.name"} ${"cervejas.alcohol"}</div>`) 
-      div.innerHTML = `${itensHtml.join("\n")}`
-      document.getElementById("cervejastabela").innerHTML = myObject.name
-      document.getElementById("alcooltabela").innerHTML = myObject.alcohol
-      
+      const tbody = document.getElementById("cervejasTabela")
+      tbody.innerHTML = ""
+      cs.forEach(item => {
+         const row = document.createElement("tr")
+         const nomeCell = document.createElement("td")
+         nomeCell.textContent = item.name
+         const alcoolCell = document.createElement("td")
+         alcoolCell.textContent = item.alcohol
+         row.appendChild(nomeCell)
+         row.appendChild(alcoolCell)
+         tbody.appendChild(row)
+      })
    }
    let botao = document.getElementById("botaoCarregar")
-   botao.addEventListener("click", () => carregarDiv(cervejas) )                 
+   botao.addEventListener("click", () => carregarDiv(cervejas))                 
 </script>
 </html>

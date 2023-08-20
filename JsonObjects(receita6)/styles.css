@@ -4,19 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-}
-
-#botaoCarregar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-    width: 20%;
-    margin-left: 10%;
 }
 
 #botaoCarregar {
@@ -25,11 +13,11 @@ body {
     align-items: center;
     text-decoration: none;
     margin: 10px 0;
-    width: 100%;
+    width: 40%;
     height: 50px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #000000;
     background: #ffffff;
     cursor: pointer;
     position: relative;
@@ -94,7 +82,6 @@ body {
         background-position: 0 0;
     }
 }
-
 
 #cervejasDiv {
     flex: 1;
