@@ -1,11 +1,9 @@
-/* Reset some default styles and create spacing */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
   }
   
-  /* Basic styling for the header */
-  .sticky-header {
+  .top-header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -15,30 +13,29 @@ body, h1, h2, h3, p, ul, li {
     z-index: 1000;
   }
   
-  /* Style for the navigation menu inside the header */
-  .sticky-header nav {
+  .top-header nav {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
   }
   
-  .sticky-header nav ul {
+  .top-header nav ul {
     list-style: none;
     display: flex;
   }
   
-  .sticky-header nav li {
+  .top-header nav li {
     margin: 0 1rem;
   }
   
-  .sticky-header nav a {
+  .top-header nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
   }
   
-  .sticky-header nav a:hover {
+  .top-header nav a:hover {
     color: #ff9900;
   }
   
