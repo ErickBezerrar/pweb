@@ -13,6 +13,8 @@
          <tr>
             <th>Nome</th>
             <th>Álcool</th>
+            <th>Style</th>
+            <th>IBU</th>
          </tr>
       </thead>
       <tbody id="cervejasTabela">
@@ -21,12 +23,53 @@
 </body>   
 <script>
    let cervejas = [
-      { name: "Guiness", alcohol: "10%" }, 
-      { name: "Desperados", alcohol: "6%" }, 
-      { name: "Becks", alcohol: "5%" },
-      { name: "Heineken", alcohol: "4%" }
+      { 
+         name: "Guiness", 
+         alcohol: "10%", 
+         style: "Red Ale", 
+         ibu: "25" 
+      }, 
+      { 
+         name: "Desperados", 
+         alcohol: "6%", 
+         style: "English IPA", 
+         ibu: "30" },
+
+      { 
+         name: "Becks", 
+         alcohol: "5%", 
+         style: "Imperial Stout", 
+         ibu: "40" 
+      },
+      { 
+         name: "Heineken", 
+         alcohol: "8%", 
+         style: "APA", 
+         ibu: "52" 
+      },
+
+      { 
+         name: "Heineken", 
+         alcohol: "9%", 
+         style: "Emperial", 
+         ibu: "41" 
+      },
+      { 
+         name: "Heineken", 
+         alcohol: "10%", 
+         style: "Red Ale", 
+         ibu: "11" 
+      },
+      { 
+         name: "Heineken", 
+         alcohol: "7%", 
+         style: "APA", 
+         ibu: "36" 
+      }
    ]
-   const carregarDiv = cs => {
+
+   const carregarDiv = (cs
+   ) => {
       const tbody = document.getElementById("cervejasTabela")
       tbody.innerHTML = ""
       cs.forEach(item => {
@@ -35,6 +78,12 @@
          nomeCell.textContent = item.name
          const alcoolCell = document.createElement("td")
          alcoolCell.textContent = item.alcohol
+         const styleCell = document.createElement("td")
+         styleCell.textContent = item.style
+         const ibuCell = document.createElement("td")
+         ibuCell.textContent = item.ibu
+         row.appendChild(ibuCell)
+         row.appendChild(styleCell)
          row.appendChild(nomeCell)
          row.appendChild(alcoolCell)
          tbody.appendChild(row)
