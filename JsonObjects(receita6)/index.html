@@ -24,72 +24,64 @@
 <script>
    let cervejas = [
       { 
-         name: "Guiness", 
-         alcohol: "10%", 
+         nome: "Guinness", 
+         alcool: "10%", 
          style: "Red Ale", 
          ibu: "25" 
       }, 
       { 
-         name: "Desperados", 
-         alcohol: "6%", 
+         nome: "Desperados", 
+         alcool: "6%", 
          style: "English IPA", 
-         ibu: "30" },
-
+         ibu: "30" 
+      },
       { 
-         name: "Becks", 
-         alcohol: "5%", 
+         nome: "Becks", 
+         alcool: "5%", 
          style: "Imperial Stout", 
          ibu: "40" 
       },
       { 
-         name: "Heineken", 
-         alcohol: "8%", 
-         style: "APA", 
-         ibu: "52" 
-      },
-
-      { 
-         name: "Heineken", 
-         alcohol: "9%", 
-         style: "Emperial", 
-         ibu: "41" 
+         nome: "Corona", 
+         alcool: "4%", 
+         style: "Pale Lager", 
+         ibu: "20" 
       },
       { 
-         name: "Heineken", 
-         alcohol: "10%", 
-         style: "Red Ale", 
-         ibu: "11" 
-      },
-      { 
-         name: "Heineken", 
-         alcohol: "7%", 
-         style: "APA", 
-         ibu: "36" 
+         nome: "Stella Artois", 
+         alcool: "5%", 
+         style: "Pilsner", 
+         ibu: "35" 
       }
-   ]
+   ];
 
-   const carregarDiv = (cs
-   ) => {
-      const tbody = document.getElementById("cervejasTabela")
-      tbody.innerHTML = ""
+   const carregarDiv = (cs, divID = "cervejasDiv", headers = ["Nome", "Álcool", "Style", "IBU"]) => {
+      const div = document.getElementById(divID);
+      if (!div) {
+         console.error(`Elemento com ID: ${divID} não foi encontrado`);
+         return;
+      }
+
+      const tbody = document.getElementById("cervejasTabela");
+      tbody.innerHTML = "";
+
+      const thead = document.querySelector(`#${divID} thead tr`);
+      thead.innerHTML = headers.map(header => `<th>${header}</th>`).join("");
+
       cs.forEach(item => {
-         const row = document.createElement("tr")
-         const nomeCell = document.createElement("td")
-         nomeCell.textContent = item.name
-         const alcoolCell = document.createElement("td")
-         alcoolCell.textContent = item.alcohol
-         const styleCell = document.createElement("td")
-         styleCell.textContent = item.style
-         const ibuCell = document.createElement("td")
-         ibuCell.textContent = item.ibu
-         row.appendChild(ibuCell)
-         row.appendChild(styleCell)
-         row.appendChild(nomeCell)
-         row.appendChild(alcoolCell)
-         tbody.appendChild(row)
-      })
-   }
-   let botao = document.getElementById("botaoCarregar")
-   botao.addEventListener("click", () => carregarDiv(cervejas))                 
+         const row = document.createElement("tr");
+         headers.forEach(header => {
+            const cell = document.createElement("td");
+            const propertyName = header.toLowerCase();
+            cell.textContent = item[propertyName] || "";
+            row.appendChild(cell);
+         });
+         tbody.appendChild(row);
+      });
+   };
+
+   let botao = document.getElementById("botaoCarregar");
+   botao.addEventListener("click", () => carregarDiv(cervejas));
+
 </script>
 </html>
