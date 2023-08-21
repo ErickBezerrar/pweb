@@ -24,64 +24,95 @@
 <script>
    let cervejas = [
       { 
-         nome: "Guinness", 
-         alcool: "10%", 
+         name: "Guinness", 
+         alcohol: "10%", 
          style: "Red Ale", 
          ibu: "25" 
       }, 
       { 
-         nome: "Desperados", 
-         alcool: "6%", 
+         name: "Desperados", 
+         alcohol: "6%", 
          style: "English IPA", 
          ibu: "30" 
       },
       { 
-         nome: "Becks", 
-         alcool: "5%", 
+         name: "Becks", 
+         alcohol: "5%", 
          style: "Imperial Stout", 
          ibu: "40" 
       },
       { 
-         nome: "Corona", 
-         alcool: "4%", 
+         name: "Corona", 
+         alcohol: "4%", 
          style: "Pale Lager", 
          ibu: "20" 
       },
       { 
-         nome: "Stella Artois", 
-         alcool: "5%", 
+         name: "Stella Artois", 
+         alcohol: "5%", 
          style: "Pilsner", 
          ibu: "35" 
+      },
+      { 
+         name: "Heineken", 
+         alcohol: "5%", 
+         style: "Pale Lager", 
+         ibu: "22" 
+      },
+      { 
+         name: "Sierra Nevada Pale Ale", 
+         alcohol: "5.6%", 
+         style: "American Pale Ale", 
+         ibu: "38" 
+      },
+      { 
+         name: "Blue Moon", 
+         alcohol: "5.4%", 
+         style: "Wheat Beer", 
+         ibu: "9" 
       }
    ];
 
-   const carregarDiv = (cs, divID = "cervejasDiv", headers = ["Nome", "Álcool", "Style", "IBU"]) => {
-      const div = document.getElementById(divID);
-      if (!div) {
-         console.error(`Elemento com ID: ${divID} não foi encontrado`);
-         return;
-      }
 
-      const tbody = document.getElementById("cervejasTabela");
-      tbody.innerHTML = "";
+   const carregarDiv = (cs, divID = "cervejasDiv", lista_header = ["Nome", "Álcool", "Estilo", "Amargor"], lista = ["name", "alcohol", "style", "ibu"] ) => {
+   const div = document.getElementById(divID);
+   if (!div) {
+      console.error(`Elemento com ID: ${divID} não foi encontrado`);
+      return;
+   }
 
-      const thead = document.querySelector(`#${divID} thead tr`);
-      thead.innerHTML = headers.map(header => `<th>${header}</th>`).join("");
+   const tbody = document.getElementById("cervejasTabela");
+   tbody.innerHTML = "";
 
-      cs.forEach(item => {
-         const row = document.createElement("tr");
-         headers.forEach(header => {
-            const cell = document.createElement("td");
-            const propertyName = header.toLowerCase();
-            cell.textContent = item[propertyName] || "";
-            row.appendChild(cell);
-         });
-         tbody.appendChild(row);
+   const thead = document.querySelector(`#${divID} thead tr`);
+   thead.innerHTML = lista_header.map(header => `<th>${header}</th>`).join("");
+
+   cs.forEach(item => {
+      const row = document.createElement("tr");
+      lista.forEach(header => {
+         const cell = document.createElement("td");
+         const propertyName = header.toLowerCase();
+         cell.textContent = item[propertyName] || defaultValues(propertyName);
+         row.appendChild(cell);
       });
+      tbody.appendChild(row);
+   });
+};
+
+const defaultValues = (propertyName) => {
+   const defaultValues = {
+      nome: "Desconhecido",
+      alcool: "Desconhecido",
+      style: "Desconhecido",
+      ibu: "Desconhecido"
    };
 
-   let botao = document.getElementById("botaoCarregar");
-   botao.addEventListener("click", () => carregarDiv(cervejas));
+   return defaultValues[propertyName] || "";
+};
+
+let botao = document.getElementById("botaoCarregar");
+botao.addEventListener("click", () => carregarDiv(cervejas));
+
 
 </script>
 </html>
