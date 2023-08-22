@@ -10,18 +10,42 @@
     <script src="libs/react-dom.js"></script>
 
     <script>
-        ReactDOM.render(
+        const table = React.createElement(
+            'table',
+            null,
             React.createElement(
-                'h1',
-                { id: 'my-heading' },
+                'thead',
+                null,
                 React.createElement(
-                    'span',
+                    'tr',
                     null,
-                    'React ',
-                    React.createElement('em', null, 'é muito'),
-                ),
-                ' massa!!'
+                    React.createElement('th', null, 'Nome'),
+                    React.createElement('th', null, 'Idade'),
+                    React.createElement('th', null, 'Profissão')
+                )
             ),
+            React.createElement(
+                'tbody',
+                null,
+                React.createElement(
+                    'tr',
+                    null,
+                    React.createElement('td', null, 'João'),
+                    React.createElement('td', null, '25'),
+                    React.createElement('td', null, 'Engenheiro')
+                ),
+                React.createElement(
+                    'tr',
+                    null,
+                    React.createElement('td', null, 'Maria'),
+                    React.createElement('td', null, '30'),
+                    React.createElement('td', null, 'Designer')
+                )
+            )
+        );
+
+        ReactDOM.render(
+            table,
             document.getElementById("app")
         );
     </script>
