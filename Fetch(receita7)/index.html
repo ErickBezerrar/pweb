@@ -9,27 +9,88 @@
 </body>
 <script>
    let cervejas = [
-      {
-         name: "Founders Breakfast Stout", 
-         alcohol: "7.6%"            
-      }, 
-      {
-         name: "Celebrator Doppelbock",
-         alcohol: "3.1%"             
-      }, 
-      {
-         name: "Dreadnaught",
-         alcohol: "6.1%"             
-      }
-   ]
+
+    {
+        name: "Guinness",
+        alcohol: "10%"
+    },
+    {
+        name: "Desperados",
+        alcohol: "6.7%"
+    },
+    {
+        name: "Becks",
+        alcohol: "5%"
+    },
+    {
+        name: "Corona",
+        alcohol: "4%"
+    },
+    {
+        name: "Stella Artois",
+        alcohol: "5%"
+    },
+    {
+        name: "Heineken",
+        alcohol: "5%"
+    },
+    {
+        name: "Sierra Nevada Pale Ale",
+        alcohol: "5.6%"
+    },
+    {
+        name: "Blue Moon",
+        alcohol: "5.4%"
+    },
+    {
+        name: "Samuel Adams Boston Lager",
+        alcohol: "4.9%"
+    },
+    {
+        name: "IPA",
+        alcohol: "6.5%"
+    },
+    {
+        name: "Guinness Nitro Cold Brew Coffee",
+        alcohol: "4%"
+    },
+    {
+        name: "Saison Dupont",
+        alcohol: "6.5%"
+    },
+    {
+        name: "Weihenstephan Hefe Weissbier",
+        alcohol: "5.4%"
+    },
+    {
+        name: "Chimay Blue",
+        alcohol: "9%"
+    },
+    {
+        name: "Rochefort 10",
+        alcohol: "11.3%"
+    }
+]
 
    const carregarDiv = cs => {
       const div = document.getElementById("cervejasDiv")
       const itensHtml = cs.map(({ name, alcohol }) => `<div>${name} -- ${alcohol}</div>`)
       div.innerHTML = `${itensHtml.join("\n")}`
+      
    }
 
+   async function carregarCervejas(){
+    
+    try{
+        let res = await fetch("https://random-data-ai.com/api/v2/beers?size=3")
+        cervejas = await res.json()
+        carregarDiv(cervejas)
+    }catch(err){
+        document.getElementById("cervejasDiv").innerHTML = "JUNINHO ESTEVE AQUI"
+    }
+}
+
    let botao = document.getElementById("botaoCarregar")
-   botao.addEventListener("click", () => carregarDiv(cervejas))
+   botao.addEventListener("click", () => carregarCervejas())
 </script>
 </html>
