@@ -1,4 +1,4 @@
-function criarTabela(dados, colunas) {
+function criarTabela(propriedades, colunas) {
     const table = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
@@ -11,7 +11,7 @@ function criarTabela(dados, colunas) {
     });
     thead.appendChild(headerRow);
 
-    dados.forEach(item => {
+    propriedades.forEach(item => {
         const row = document.createElement("tr");
         colunas.forEach(coluna => {
             const td = document.createElement("td");
