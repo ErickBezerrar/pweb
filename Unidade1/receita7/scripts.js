@@ -1,4 +1,3 @@
-
 const carregarDiv = cs => {
     const div = document.getElementById("cervejasDiv")
     const itensHtml = cs.map(({ name, alcohol, style, hop, id, uid, brand, yeast, malts, ibu, blg }) => `<div>${name} -- ${alcohol} -- ${style} -- ${hop} -- ${id} -- ${uid} -- ${brand} -- ${yeast} -- ${malts} -- ${ibu} -- ${blg}</div>`)

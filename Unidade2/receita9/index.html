@@ -9,19 +9,136 @@
       <script src="libs/react-dom.js"></script>
       <script src="libs/babel.js"></script>
       <script type="text/babel">
+
+      let cervejas = [
+            { 
+              name: "Guinness", 
+              alcohol: "10%", 
+              style: "Red Ale", 
+              ibu: "25" 
+            }, 
+            { 
+              name: "Desperados", 
+              alcohol: "6%", 
+              style: "English IPA", 
+              ibu: "30" 
+            },
+            { 
+              name: "Becks", 
+              alcohol: "5%", 
+              style: "Imperial Stout", 
+              ibu: "40" 
+            },
+            { 
+              name: "Corona", 
+              alcohol: "4%", 
+              style: "Pale Lager", 
+              ibu: "20" 
+            },
+            { 
+              name: "Stella Artois", 
+              alcohol: "5%", 
+              style: "Pilsner", 
+              ibu: "35" 
+            },
+            { 
+              name: "Heineken", 
+              alcohol: "5%", 
+              style: "Pale Lager", 
+              ibu: "22" 
+            },
+            { 
+              name: "Sierra Nevada Pale Ale", 
+              alcohol: "5.6%", 
+              style: "American Pale Ale", 
+              ibu: "38" 
+            },
+            { 
+              name: "Blue Moon", 
+              alcohol: "5.4%", 
+              style: "Wheat Beer", 
+              ibu: "9" 
+            },
+            { 
+              name: "Blue Moon", 
+              alcohol: "5.4%", 
+              style: "Wheat Beer", 
+              ibu: "9" 
+            },
+            { 
+              name: "Samuel Adams Boston Lager", 
+              alcohol: "4.9%", 
+              style: "Lager", 
+              ibu: "30" 
+            },
+            { 
+              name: "IPA", 
+              alcohol: "6.5%", 
+              style: "India Pale Ale", 
+              ibu: "55" 
+            },
+            { 
+              name: "Guinness Nitro Cold Brew Coffee", 
+              alcohol: "4%", 
+              style: "Stout", 
+              ibu: "45" 
+            },
+            { 
+              name: "Saison Dupont", 
+              alcohol: "6.5%", 
+              style: "Saison", 
+              ibu: "30" 
+            },
+            { 
+              name: "Weihenstephan Hefe Weissbier", 
+              alcohol: "5.4%", 
+              style: "Hefeweizen", 
+              ibu: "14" 
+            },
+            { 
+              name: "Chimay Blue", 
+              alcohol: "9%", 
+              style: "Belgian Strong Dark Ale", 
+              ibu: "30" 
+            },
+            { 
+              name: "Rochefort 10", 
+              alcohol: "11.3%", 
+              style: "Quadrupel", 
+              ibu: "27" 
+            }
+        ];
+        
+        function TabelaBebidas() {
+          return (
+            <div id="app">
+              <table id="tabela" border="9">
+                <thead>
+                  <tr><th>Nome</th><th>Marca</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
+        function Cabecalho(){
+          return(
+              <h1 id="cabecalho">
+                Minha tabela de bebidas
+              </h1>
+          );
+        }
+        
         ReactDOM.render(
-        <div id="app">
-        <table id="tabela" border="1">
-            <thead>
-                <tr><th>Nome</th><th>Marca</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-            </tbody>
-        </table>
-        </div>
-        ,
-        document.getElementById("app"))
+        <div>
+          <TabelaBebidas />
+          <Cabecalho />
+        </div>,
+          document.getElementById("app"),
+        );
      </script>
    </body>
 </html>
