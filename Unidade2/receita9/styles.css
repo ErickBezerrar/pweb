@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; 
 }
 
 h1 {
@@ -14,12 +14,11 @@ h1 {
     align-items: center;
     justify-content: center;
     color: #041e1f;
-    
+    align-self: flex-end; 
 }
 
 #tabela {
-    flex: 1;
-    margin-right: 20px;
+    margin-left: 20px; 
     border-collapse: collapse;
     width: 100%;
     border: 1px transparent #ffffff;
@@ -28,6 +27,19 @@ h1 {
     backdrop-filter: blur(10px);
     border-radius: 10px; 
     overflow: hidden; 
+    
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #tabela th, #tabela td {
@@ -39,9 +51,8 @@ h1 {
     background-color: transparent transparent;
 }
 
-
 #botaoCarregar {
-    width: 220px;
+    width: 300px;
     height: 50px;
     border: none;
     outline: none;
@@ -52,6 +63,8 @@ h1 {
     position: relative;
     z-index: 0;
     border-radius: 10px;
+    align-self: center;
+    margin-left: 20px; 
 }
 
 #botaoCarregar:before {
