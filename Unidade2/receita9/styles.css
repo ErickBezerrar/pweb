@@ -1,0 +1,40 @@
+body {
+    background-color: #084d6e;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Alterado para column */
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #041e1f;
+    margin: 0;
+    padding: 20px; /* Adicionado espaçamento interno */
+    text-align: center; /* Centralizar o texto */
+}
+
+#tabela {
+    flex: 1;
+    margin: 20px; /* Adicionado espaçamento externo */
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ba2020; /* Corrigido o estilo da borda */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+#tabela th, #tabela td {
+    padding: 10px;
+    text-align: center; 
+}
+
+#tabela th {
+    background-color: #b53c3c;
+}

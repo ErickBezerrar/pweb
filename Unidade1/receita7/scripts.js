@@ -11,7 +11,7 @@ async function carregarCervejas() {
     try {
         let res = await fetch("https://random-data-api.com/api/v2/beers?size=3");
         let cervejas = await res.json();
-
+        
         const colunas = ["name", "alcohol", "style", "hop", "brand"];
         const tabela = criarTabela(cervejas, colunas);
 
