@@ -12,7 +12,7 @@
     <script src="libs/babel.js"></script>
     <script type="text/babel">
 
-            let cervejas = [
+        let cervejas = [
           { 
             name: "Guinness", 
             alcohol: "10%", 
@@ -110,7 +110,7 @@
             ibu: "27" 
           }
       ];
-        
+
         function TabelaJSON() {
             return (
                 <div id="tabela">
@@ -163,18 +163,17 @@
         }
         
         function carregarDiv() {
-            let div = document.getElementById("botaoCarregar");
+            ReactDOM.render(
+                <div>
+                    <TabelaBebidas />
+                    <Cabecalho />
+                    <TabelaJSON />
+                </div>,
+                document.getElementById("app")
+            );
         }
-        
-        ReactDOM.render(
-            <div>
-                <TabelaBebidas />
-                <Cabecalho />
-                <TabelaJSON />
-                <carregarDiv />
-            </div>,
-            document.getElementById("botaoCarregar").addEventListener("click", carregarDiv),
-        );
+
+        document.getElementById("botaoCarregar").addEventListener("click", carregarDiv);
     </script>
 </body>
 </html>
