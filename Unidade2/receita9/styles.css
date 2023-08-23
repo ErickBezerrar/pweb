@@ -46,6 +46,7 @@ h1 {
     border: none;
     outline: none;
     color: #fff;
+    text-decoration: underline;
     background: #111;
     cursor: pointer;
     position: relative;
