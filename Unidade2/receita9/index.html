@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="styles.css">      
 </head>
 <body>
-    <div id="app"></div>
+  <button id="botaoCarregar">CARREGANDO CERVEJAS</button>     
+  <div id="app"></div>
     <script src="libs/react.js"></script>
     <script src="libs/react-dom.js"></script>
     <script src="libs/babel.js"></script>
     <script type="text/babel">
-      
+
             let cervejas = [
           { 
             name: "Guinness", 
@@ -163,7 +164,6 @@
         
         function carregarDiv() {
             let div = document.getElementById("botaoCarregar");
-            botaoCarregar.addEventListener("click", TabelaJSON);
         }
         
         ReactDOM.render(
@@ -173,7 +173,7 @@
                 <TabelaJSON />
                 <carregarDiv />
             </div>,
-            document.getElementById("app"),
+            document.getElementById("botaoCarregar").addEventListener("click", carregarDiv),
         );
     </script>
 </body>
