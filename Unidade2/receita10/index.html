@@ -16,7 +16,7 @@
          render() {
             return (
                <div>
-                  <h1>Tabela de Bebidas</h1>
+                  <h1>{this.props.titulo}</h1>
                   <table id="tabela" border="1">
                      <thead>
                         <tr>
@@ -40,7 +40,7 @@
         render() {
             return (
                 <div>
-                    <h2>Formulário de Bebidas</h2>
+                    <h2>{this.props.titulo}</h2>
                     <form id="formulario">
                         <label htmlFor="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" />
@@ -106,8 +106,8 @@
 
       ReactDOM.render(
         <div>
-            <TabelaBebidas />
-            <Formularios/>
+            <TabelaBebidas titulo="Tabela de Bebidas"/>
+            <Formularios titulo="Formulario"/>
         </div>,
          document.getElementById("app")
       );
