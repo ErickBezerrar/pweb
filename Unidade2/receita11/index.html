@@ -10,38 +10,56 @@
       <script src="libs/react-dom.js"></script>
       <script src="libs/babel.js"></script>
       <script type="text/babel">
-         const TabelaBebidas = ({ titulo, cabecalhos: [cabecalho1, cabecalho2], corpo: [nome1, nome2, nome3] }) => {
-            return (
-               <div>
-                  <h1>{titulo}</h1>
-                  <table id="tabela" border="3">
-                     <thead>
-                        <tr>
-                           <th>{cabecalho1}</th>
-                           <th>{cabecalho2}</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>{nome1}</td>
-                           <td>{nome2}</td>
-                        </tr>
-                        <tr>
-                            <td>{nome3}</td>
-                            <td>{nome2}</td>    
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            );
+         const TabelaBebidas = ({ titulo, cabecalhos, corpo }) => {
+             return (
+                 <div>
+                     <h1>{titulo}</h1>
+                     <table id="tabela" border="3">
+                         <thead>
+                             <tr>
+                                 {cabecalhos.map((cabecalho, index) => (
+                                     <th key={index}>{cabecalho}</th>
+                                 ))}
+                             </tr>
+                         </thead>
+                         <tbody>
+                             {corpo.map((corpo, index) => (
+                                 <tr key={index}>
+                                     {corpo.map((conteudo, innerIndex) => (
+                                         <td key={innerIndex}>{conteudo}</td>
+                                     ))}
+                                 </tr>
+                             ))}
+                         </tbody>
+                     </table>
+                 </div>
+             );
          }
          const valoresCabecalhos = ["Nome", "Marca"]
-         const valoresCorpo = ["Heineken", "Ambev", "Devassa"]
-         
+         const valoresCorpo = [
+            
+            ["Heineken", "Ambev"],
+            ["Devasssa", "Ambev"],
+            ["Guiness", "Cambio"],
+            ["Stella Artois", "Ambev"],
+            ["Budweiser", "Ambev"],
+            ["Skol", "Ambev"],
+            ["Corona", "Grupo Modelo"],
+            ["Pilsner Urquell", "Asahi Group"],
+            ["Sapporo", "Sapporo Brewery"],
+            ["Erdinger", "Erdinger Weissbräu"],
+            ["Beck's", "Anheuser-Busch InBev"],
+            ["Hoegaarden", "Anheuser-Busch InBev"],
+            ["Chimay", "Abbaye Notre-Dame de Scourmont"],
+            ["Paulaner", "Paulaner Brauerei"],
+            ["Franziskaner", "Spaten-Franziskaner-Bräu"]
+         ];
+                  
          ReactDOM.render(
-            <TabelaBebidas titulo="Minha Tabela de Cana" cabecalhos={valoresCabecalhos} corpo={valoresCorpo} />,
-            document.getElementById("app")
+             <TabelaBebidas titulo="Minha Tabela de Cana" cabecalhos={valoresCabecalhos} corpo={valoresCorpo} />,
+             document.getElementById("app")
          );
-      </script>
+     </script>
+     
    </body>
 </html>
