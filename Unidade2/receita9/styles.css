@@ -1,113 +1,55 @@
 body {
-    background-color: #084d6e;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;;
+    background-color: #dfe6e9; 
+    color: #2d3436; 
 }
 
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #041e1f;
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b2bec3; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#cabecalho {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0984e3; 
 }
 
 #tabela {
-    margin-left: 20px; 
-    border-collapse: collapse;
     width: 100%;
-    border: 1px transparent #ffffff;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px);
-    border-radius: 10px; 
-    overflow: hidden; 
-    animation: fadeIn 1s ease-in-out;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#tabela th, #tabela td {
+#tabela th,
+#tabela td {
     padding: 10px;
-    text-align: center; 
+    border-bottom: 1px solid #bdc3c7; 
 }
 
 #tabela th {
-    background-color: transparent transparent;
+    background-color: #dfe6e9; 
 }
 
 #botaoCarregar {
-    width: 300px;
-    height: 50px;
-    border: none;
-    outline: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0984e3; 
     color: #fff;
-    text-decoration: underline;
-    background: #111;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    align-self: center;
-    margin-left: 20px; 
 }
 
-#botaoCarregar:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-#botaoCarregar:active {
-    color: #000
-}
-
-#botaoCarregar:active:after {
-    background: transparent;
-}
-
-#botaoCarregar:hover:before {
-    opacity: 1;
-}
-
-#botaoCarregar:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+#botaoCarregar:hover {
+    background-color: #0568b0; 
 }
