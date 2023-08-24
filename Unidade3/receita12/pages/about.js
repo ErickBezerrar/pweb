@@ -1,4 +1,4 @@
-export default function About(){
+export function About(){
 
     return (
  
@@ -7,6 +7,7 @@ export default function About(){
           <h2>
  
             Página sobre
+
           </h2>
  
        </div>

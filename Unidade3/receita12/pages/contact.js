@@ -1,4 +1,4 @@
-export default function Contact(){
+export function Contact(){
 
     return (
  
@@ -7,6 +7,7 @@ export default function Contact(){
           <h2>
  
             Página contato
+
           </h2>
  
        </div>
