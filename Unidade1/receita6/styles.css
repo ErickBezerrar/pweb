@@ -1,93 +1,47 @@
-body {
-    background-color: #17485f;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items:first baseline;
-    min-height: 100vh;
-}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #084d6e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+         }
 
-#botaoCarregar {
-    padding: 10px 20px;
-    border: none;
-    background-color: #765151;
-    color: #000000;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
+         #cervejasDiv {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+         }
 
-#botaoCarregar:hover {
-    background-color: #222;
-    color: #ffffff;
-}
+         th, td {
+            padding: 12px 15px;
+            text-align: left;
+         }
 
-#botaoCarregar:focus {
-    outline: none;
-}
+         th {
+            background-color: #007bff;
+            color: white;
+         }
 
-@keyframes glowing {
-    0% {
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        background-color: #f0f0f0;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
-    100% {
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-}
+         tr:nth-child(even) {
+            background-color: #f2f2f2;
+         }
 
-#botaoCarregar:hover {
-    animation: glowing 1.5s infinite;
-}
+         button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+         }
 
-#cervejasDiv {
-    flex: 1;
-    width: 90%;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #17485f;
-    color: #fff;
-    margin-top: 20px;
-}
-
-#cervejasDiv table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#cervejasDiv th, #cervejasDiv td {
-    padding: 12px;
-    text-align: center;
-}
-
-#cervejasDiv th {
-    background-color: #1c4b63;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 2px solid #1a445d;
-}
-
-#cervejasDiv tr:nth-child(even) {
-    background-color: #1a445d;
-}
-
-#cervejasDiv tr:hover {
-    background-color: #1c4b63;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-#cervejasDiv tr:hover td {
-    color: #fff;
-}
-
-#cervejasDiv td {
-    border-bottom: 1px solid #1a445d;
-}
+         button:hover {
+            background-color: #0056b3;
+         }
