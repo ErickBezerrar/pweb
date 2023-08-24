@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container h2 {
+  color: #333;
+}
+
+.about {
+  margin-bottom: 20px;
+}
+
+.contact {
+  font-style: italic;
+  color: #888;
+}
