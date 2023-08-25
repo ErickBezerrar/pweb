@@ -1,47 +1,48 @@
- body {
-            font-family: Arial, sans-serif;
-            background-color: #084d6e;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-         }
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f0f0f0;
+   margin: 0;
+   padding: 0;
+}
 
-         #cervejasDiv {
-            border-collapse: collapse;
-            width: 80%;
-            max-width: 800px;
-            background-color: white;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            overflow: hidden;
-         }
+th {
+   background-color: #333;
+   color: white;
+   padding: 10px;
+   text-align: left;
+}
 
-         th, td {
-            padding: 12px 15px;
-            text-align: left;
-         }
+td {
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+}
 
-         th {
-            background-color: #007bff;
-            color: white;
-         }
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+}
 
-         tr:nth-child(even) {
-            background-color: #f2f2f2;
-         }
+#botaoCarregar {
+   background-color: #007bff;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 20px;
+   display: block;    
+   margin: 0 auto; 
+}
 
-         button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-         }
+#botaoCarregar:hover {
+   background-color: #0056b3;
+}
 
-         button:hover {
-            background-color: #0056b3;
-         }
+#cervejasDiv {
+   margin-top: 20px;
+}
+
+tr:hover {
+   background-color: #f5f5f5;
+}
