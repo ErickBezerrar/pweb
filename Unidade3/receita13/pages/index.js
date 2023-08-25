@@ -1,10 +1,13 @@
 export default function Principal(){
     return (
- 
+
        <div>
- 
-          <h1>Nova Página</h1>
- 
+         <div class="cabecalho">
+            <a href="">Home</a> |
+            <a href="quemsomos.js">Quem somos</a> |
+            <a href="contato.html">Contato</a> |
+            <a href="cadastro.html">Cadastro</a>
+        </div>
        </div>
  
     )
