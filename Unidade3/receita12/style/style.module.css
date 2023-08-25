@@ -1,7 +1,10 @@
+
+
 .container {
   text-align: center;
   padding: 20px;
   background-color: #084d6e;
+  margin: 0;
 }
 
 .container h2 {

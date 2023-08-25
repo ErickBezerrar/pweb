@@ -11,7 +11,8 @@ export default function Home() {
             </h2>
             <About />
             <Contact />
-            <img src="https://arquivos.info.ufrn.br/arquivos/20202020440d2c7471879040a453273e7/IMG_20200423_120408753-01.jpeg"></img>
+            <img width='375'src="https://arquivos.info.ufrn.br/arquivos/20202020440d2c7471879040a453273e7/IMG_20200423_120408753-01.jpeg"></img>
+            <p>Obrigado por iluminar o caminho do código e transformar o complexo em algo compreensível. Sua orientação é a faísca que acende minha paixão pela programação.</p>
         </div>
     )
 }
