@@ -5,10 +5,10 @@ export default function principal(){
 
        <div>
          <div class="cabecalho">
-            <Link href="/">Home</Link> |
-            <Link href="/paginasobre/sobre">About Us</Link> |
-            <Link href="/paginacontato/contato">Contato</Link> |
-            <Link href="/paginacadastro/cadastro">Cadastro</Link> |
+            <Link href="/">Home</Link> 
+            <Link href="/paginasobre/sobre">About Us</Link> 
+            <Link href="/paginacontato/contato">Contato</Link> 
+            <Link href="/paginacadastro/cadastro">Cadastro</Link> 
         </div>
        </div>
  
@@ -16,12 +16,3 @@ export default function principal(){
  
  }
 
-
- export function MariaPrea(){
-    return (
- 
-       <h2>Morreu Maria Preá...</h2>
- 
-    )
- 
- }

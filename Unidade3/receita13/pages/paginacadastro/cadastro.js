@@ -3,6 +3,13 @@ import React from 'react';
 export default function Cadastro() {
     return (
         <div>
+            <div class="cabecalho">
+            <Link href="/paginaprincipal/principal">Home</Link> 
+            <Link href="/paginasobre/sobre">About Us</Link> 
+            <Link href="/paginacontato/contato">Contato</Link> 
+            <Link href="/paginacadastro/cadastro">Cadastro</Link> 
+            </div>
+
             <div className="container">
                 <h1>Cadastre-se</h1>
                 <form action="#" method="post">
