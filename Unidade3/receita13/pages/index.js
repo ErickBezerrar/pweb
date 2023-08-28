@@ -1,18 +1,21 @@
-export default function Principal(){
+import Link from 'next/link'
+
+export default function principal(){
     return (
 
        <div>
          <div class="cabecalho">
-            <a href="">Home</a> |
-            <a href="quemsomos.js">Quem somos</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="cadastro.html">Cadastro</a>
+            <Link href="/">Home</Link> |
+            <Link href="/paginasobre/sobre">About Us</Link> |
+            <Link href="/paginacontato/contato">Contato</Link> |
+            <Link href="/paginacadastro/cadastro">Cadastro</Link> |
         </div>
        </div>
  
     )
  
  }
+
 
  export function MariaPrea(){
     return (
