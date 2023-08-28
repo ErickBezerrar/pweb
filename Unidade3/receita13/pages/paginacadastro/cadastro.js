@@ -1,13 +1,13 @@
-import React from 'react';
+import Link from 'next/link'
 
 export default function Cadastro() {
     return (
         <div>
             <div class="cabecalho">
-            <Link href="/paginaprincipal/principal">Home</Link> 
-            <Link href="/paginasobre/sobre">About Us</Link> 
-            <Link href="/paginacontato/contato">Contato</Link> 
-            <Link href="/paginacadastro/cadastro">Cadastro</Link> 
+                <Link href="/principal">Home</Link> 
+                <Link href="/paginasobre/sobre">About Us</Link> 
+                <Link href="/paginacontato/contato">Contato</Link> 
+                <Link href="/">Cadastro</Link> 
             </div>
 
             <div className="container">
