@@ -4,10 +4,10 @@ export default function contato(){
     return (
  
     <div>
-        <div class="cabecalho">
-            <Link href="/principal">Home</Link> 
+        <div className="cabecalho">
+            <Link href="/">Home</Link> 
             <Link href="/paginasobre/sobre">About Us</Link> 
-            <Link href="/">Contato</Link> 
+            <Link href="/paginacontato/contato">Contato</Link> 
             <Link href="/paginacadastro/cadastro">Cadastro</Link> 
         </div>
 

@@ -3,11 +3,11 @@ import Link from 'next/link'
 export default function Cadastro() {
     return (
         <div>
-            <div class="cabecalho">
-                <Link href="/principal">Home</Link> 
+            <div className="cabecalho">
+                <Link href="/">Home</Link> 
                 <Link href="/paginasobre/sobre">About Us</Link> 
                 <Link href="/paginacontato/contato">Contato</Link> 
-                <Link href="/">Cadastro</Link> 
+                <Link href="/paginacadastro/cadastro">Cadastro</Link> 
             </div>
 
             <div className="container">
