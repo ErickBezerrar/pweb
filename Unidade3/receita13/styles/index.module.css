@@ -1,0 +1,18 @@
+.cabecalho {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  padding: 10px;
+  font-size: xx-large;
+  margin-right: 50px;
+  margin-top: 70px;
+}
+
+.cabecalho a:not(:last-child) {
+    margin-right: 25px;
+}
+
+.body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(229,121,167,1) 35%, rgba(0,212,255,1) 100%);
+}

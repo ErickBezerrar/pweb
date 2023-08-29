@@ -1,4 +1,5 @@
 import Link from 'next/link'
+//import styles from '../styles/sobre.module.css';
 
 export default function sobre(){
     return (
@@ -10,9 +11,10 @@ export default function sobre(){
                 <Link href="/paginacadastro/cadastro">Cadastro</Link> 
             </div>
 
-            <p className ="text-3xl font-bold underline">página sobre</p>
+            <p className ="">página sobre</p>
         </div>
 
     )
  
-} 
+}
+

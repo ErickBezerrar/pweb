@@ -1,4 +1,6 @@
 import Link from 'next/link'
+//import styles from '../styles/cadastro.module.css';
+
 
 export default function Cadastro() {
     return (
