@@ -1,17 +1,13 @@
+import React from 'react'; 
 import Link from 'next/link'
+import Navigation from '../../pages/navigation';
 //import styles from '../styles/contato.module.css';
 
-export default function contato(){
+export default function Contato(){
     return (
  
     <div>
-        <div className="cabecalho">
-            <Link href="/">Home</Link> 
-            <Link href="/paginasobre/sobre">About Us</Link> 
-            <Link href="/paginacontato/contato">Contato</Link> 
-            <Link href="/paginacadastro/cadastro">Cadastro</Link> 
-        </div>
-
+            <Navigation></Navigation>
         <div className="container">
             <h1>Entre em Contato</h1>
             <p>Se você tiver alguma dúvida ou comentário, por favor, preencha o formulário abaixo.</p>

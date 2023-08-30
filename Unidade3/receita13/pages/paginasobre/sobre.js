@@ -1,16 +1,12 @@
+import React from 'react'; 
 import Link from 'next/link'
+import Navigation from '../../pages/navigation';
 //import styles from '../styles/sobre.module.css';
 
-export default function sobre(){
+export default function Sobre(){
     return (
         <div>
-            <div className="cabecalho">
-                <Link href="/">Home</Link> 
-                <Link href="/paginasobre/sobre">About Us</Link> 
-                <Link href="/paginacontato/contato">Contato</Link> 
-                <Link href="/paginacadastro/cadastro">Cadastro</Link> 
-            </div>
-
+            <Navigation></Navigation>
             <p className ="">página sobre</p>
         </div>
 

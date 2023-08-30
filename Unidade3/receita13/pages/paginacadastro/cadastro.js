@@ -1,18 +1,12 @@
 import React from 'react'; 
 import Link from 'next/link'
+import Navigation from '../../pages/navigation';
 //import styles from '../styles/cadastro.module.css';
-
 
 export default function Cadastro() {
     return (
         <div>
-            <div className=''>
-                <Link href="/">Home</Link> 
-                <Link href="/paginasobre/sobre">About Us</Link> 
-                <Link href="/paginacontato/contato">Contato</Link> 
-                <Link href="/paginacadastro/cadastro">Cadastro</Link> 
-            </div>
-
+            <Navigation></Navigation>
             <div className="container">
                 <h1>Cadastre-se</h1>
                 <form action="#" method="post">
