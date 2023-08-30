@@ -42,33 +42,52 @@
   text-decoration: underline; 
 }
 
+.divinfo {
+  display: flex;
+  align-items: center; 
+}
+
+.imagem {
+  margin-top: 10%; 
+  max-width: 40%; 
+  margin-left: 140px; 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+  border: 2px solid #333;
+}
+
+.divinfo2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;  
+}
+
+.imagem2 {
+  max-width: 40%;
+  margin-left: 140px; 
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+  border: 2px solid #333;
+}
+
+
 .somosempresa{
   font-size: 50px;
   font-weight: bolder;
   color: #333; 
   margin-left: 50px; 
-  text-decoration: underline; 
-}
-
-.paragrafo-container {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 200px; 
-  padding: 10px;
-  background-color: #f0f0f0; 
-  border-radius: 5px;
 }
 
 .paragrafo {
+  display: column;
   font-size: 30px;
   font-weight: bolder;
   color: #333; 
+  width: 35%;
   margin: 0;
   padding: 0;
   text-decoration: dashed; 
-  text-align: right; 
   margin-right: 50px; 
+  margin-left: auto; 
   white-space: pre-line; 
   animation: fadeInUp 3s ease-out forwards; 
   opacity: 0;
