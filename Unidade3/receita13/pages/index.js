@@ -7,6 +7,7 @@ export default function Principal(){
     return (
         <div>
             <Navigation></Navigation>
+            
         </div>
     )
 }
