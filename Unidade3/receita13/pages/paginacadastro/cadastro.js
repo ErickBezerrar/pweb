@@ -1,3 +1,4 @@
+import React from 'react'; 
 import Link from 'next/link'
 //import styles from '../styles/cadastro.module.css';
 
@@ -5,7 +6,7 @@ import Link from 'next/link'
 export default function Cadastro() {
     return (
         <div>
-            <div className="cabecalho">
+            <div className=''>
                 <Link href="/">Home</Link> 
                 <Link href="/paginasobre/sobre">About Us</Link> 
                 <Link href="/paginacontato/contato">Contato</Link> 
