@@ -1,0 +1,62 @@
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 8%;
+}
+
+.nameLogin {
+    text-align: center;
+    color: #333;
+}
+
+.inputbox {
+    margin-bottom: 15px;
+    width: 280px;
+
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bnt {
+    width: 100%;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bnt:hover {
+    background-color: #2980b9;
+}
+
+.registerLink {
+    text-align: center;
+    color: #333;
+}
+
+.registerLink a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.registerLink a:hover {
+    text-decoration: underline;
+}
