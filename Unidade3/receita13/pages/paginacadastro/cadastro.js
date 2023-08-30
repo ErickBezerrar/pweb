@@ -7,29 +7,30 @@ export default function Cadastro() {
     return (
         <div>
             <Navigation></Navigation>
-            <div className={styles.wrapper}>
-                <form action=''>
-                    <h1 className={styles.nameLogin}>Login</h1>
-                    <div className={styles.inputbox}>
-                        <input type='text' placeholder='Username' required></input>
-                    </div>
-                    <div className={styles.inputbox}>
-                        <input type='password' placeholder='Password' required></input>
-                    </div>
+                <div className={styles.wrapper}>
+                    <form action=''>
+                        <h1 className={styles.nameLogin}>Login</h1>
+                        <div className={styles.inputbox}>
+                            <input type='text' placeholder='Username' required></input>
+                        </div>
+                        <div className={styles.inputbox}>
+                            <input type='password' placeholder='Password' required></input>
+                        </div>
 
-                    <div className={styles.rememberForgot}>
-                        <label><input type='checkbox'></input> Remember me</label>
-                        <a href='#'>Forgot password?</a>
-                    </div>
+                        <div className={styles.rememberForgot}>
+                            <label><input type='checkbox'></input> Remember me</label>
+                            <a href='#'>Forgot password?</a>
+                        </div>
 
 
-                    <button type='submit' className={styles.bnt}>Login</button>
+                        <button type='submit' className={styles.bnt}>Login</button>
 
-                    <div className={styles.registerLink}>
-                        <p>Don't have an account? <a href='#'>Register</a></p>
-                    </div>
-                </form>
-            </div>    
+                        <div className={styles.registerLink}>
+                            <p>Don't have an account? <a href='#'>Register</a></p>
+                        </div>
+                    </form>
+                    <img src='images/iphone-feature-04.png' className={styles.imageregister} />
+                </div>
         </div>
     );
 }
