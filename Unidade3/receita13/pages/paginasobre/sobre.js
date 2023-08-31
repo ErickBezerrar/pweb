@@ -7,7 +7,6 @@ export default function Sobre(){
     return (
         <div>
             <Navigation></Navigation>
-            <p className ="">página sobre</p>
         </div>
 
     )

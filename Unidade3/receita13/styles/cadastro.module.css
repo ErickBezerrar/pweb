@@ -1,20 +1,12 @@
 .wrapper {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
     margin-top: 8%;
-}
-
-.imageregister {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
 }
 
 .nameLogin {
@@ -25,7 +17,6 @@
 .inputbox {
     margin-bottom: 15px;
     width: 280px;
-
 }
 
 .inputbox input {

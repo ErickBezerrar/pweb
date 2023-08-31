@@ -29,7 +29,6 @@ export default function Cadastro() {
                             <p>Don't have an account? <a href='#'>Register</a></p>
                         </div>
                     </form>
-                    <img src='images/iphone-feature-04.png' className={styles.imageregister} />
                 </div>
         </div>
     );
