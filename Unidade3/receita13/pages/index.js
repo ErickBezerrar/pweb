@@ -6,7 +6,7 @@ import Navigation from '../pages/navigation';
 export default function Principal(){
     return (
         <div>
-            <Navigation></Navigation>
+            <Navigation />
             <div className={styles.divinfo}>
                 <h1 className={styles.bemvindo}>Bem-vindo ao <br></br>Nosso Website!</h1>
                 <img className={styles.imagem} src='https://www.proyectum.com/sistema/wp-content/uploads/2020/02/Empresa-de-tecnolog%C3%ADa.jpg'></img>

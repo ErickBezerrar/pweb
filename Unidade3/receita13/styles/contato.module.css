@@ -1,0 +1,75 @@
+.containerContato {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  .contactDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .contactInfo,
+  .contactForm {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contactInfo {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .contactForm {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .textArea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .submitButton {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .entreemcontato{
+    font-size: 45px;
+    font-style: italic;
+  }

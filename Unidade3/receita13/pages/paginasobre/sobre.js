@@ -6,7 +6,7 @@ import Navigation from '../../pages/navigation';
 export default function Sobre(){
     return (
         <div>
-            <Navigation></Navigation>
+            <Navigation />
         </div>
 
     )

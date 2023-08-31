@@ -6,7 +6,7 @@ import styles from '../../styles/cadastro.module.css';
 export default function Cadastro() {
     return (
         <div>
-            <Navigation></Navigation>
+            <Navigation />
                 <div className={styles.wrapper}>
                     <form action=''>
                         <h1 className={styles.nameLogin}>Login</h1>
