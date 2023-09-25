@@ -6,7 +6,9 @@ export default function Movies({data}){
 
             <div>
 
-            {data.Search.map( (m) => <div>{m.Title} --- {m.Year}</div>  )}               
+            {data.Search.map( (m) => <div>{m.Title} --- {m.Year}</div> )}
+            {data.Search.map( (m) => <div>{m.imdbID} --- {m.Type}</div> )}
+            {data.Search.map( (m) => <div>{m.Poster}</div> )}               
 
             </div>
 
