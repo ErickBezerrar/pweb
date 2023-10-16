@@ -1,35 +1,53 @@
-export default function Movies({data}){
+import { useState } from 'react';
+import styles from '../styles/movies.module.css';
 
-    return (
+export default function Movies({ data }) {
+  const [searchQuery, setSearchQuery] = useState('');
 
-        <div>
-            <div>
+  const handleSearch = async () => {
+    const res = await fetch(`http://www.omdbapi.com/?apikey=e0d35ba4&s=${searchQuery}`);
+    const newData = await res.json();
+    // Atualiza os resultados da pesquisa no estado data
+    data.Search = newData.Search;
+  };
 
-            {data.Search.map( (m) => <div>{m.Title} --- {m.Year}</div> )}
-            {data.Search.map( (m) => <div>{m.imdbID} --- {m.Type}</div> )}
-            {data.Search.map( (m) => <div>{m.Poster}</div> )}               
-
-            </div>
-        </div>
-
-    )
-
+  return (
+    <div className={styles.pageContainer}>
+      <div>
+        <input
+          type="text"
+          placeholder="Digite o filme"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <div className={styles.recado}>Essa pesquisa pode domorar alguns segundos</div>
+        <button className={styles.searchButton} onClick={handleSearch}>Pesquisar</button>
+      </div>
+      <div className={styles.moviesContainer}>
+        {data.Search.map((m) => (
+          <div key={m.imdbID} className={styles.movieCard}>
+            <a href={`https://www.imdb.com/title/${m.imdbID}/`} target="_blank" rel="noopener noreferrer">
+              <img src={m.Poster} alt={m.Title} />
+            </a>
+            <div className={styles.movieText}>{m.Title} --- {m.Year}</div>
+            <div className={styles.movieText}>{m.imdbID} --- {m.Type}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export async function getServerSideProps(context){
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const searchQuery = query.q || 'bagdad';
 
-    const res = await fetch(`http://www.omdbapi.com/?apikey=e0d35ba4&s=bagdad`)
+  const res = await fetch(`http://www.omdbapi.com/?apikey=e0d35ba4&s=${searchQuery}`);
+  const data = await res.json();
 
-    const data = await res.json()
-
-    return {
-  
-        props: {
-  
-            data
-  
-        }
-  
-    }
-  
+  return {
+    props: {
+      data,
+    },
+  };
 }

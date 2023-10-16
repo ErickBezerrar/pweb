@@ -1,0 +1,48 @@
+.pageContainer {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movieCard {
+  width: 300px;
+  background-color: #ffffff; 
+  border: 1px solid #e0e0e0; 
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchButton {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.movieText {
+  font-size: 18px; 
+  margin-top: 10px;
+  color: #333; 
+  text-align: center;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: #007bff; 
+}
+
+.movieLink {
+  display: block;
+  text-align: center;
+}
